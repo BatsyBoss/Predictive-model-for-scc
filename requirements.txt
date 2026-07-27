@@ -1,0 +1,32 @@
+# ---- Core app -------------------------------------------------------------
+streamlit>=1.32
+
+# ---- Data & ML --------------------------------------------------------
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+xgboost>=2.0        # preferred regressor; app falls back to sklearn's
+                     # GradientBoostingRegressor automatically if this
+                     # package can't be installed in your environment
+joblib>=1.3
+
+# ---- Charts -----------------------------------------------------------
+# Pinned deliberately: Plotly 6.1+ switched static image export (PNG
+# downloads) to Kaleido v1, which no longer bundles Chrome and instead
+# requires a separately-installed Chrome/Chromium on the host machine.
+# Kaleido 0.2.1 still bundles its own headless Chrome, so PNG chart
+# downloads work out of the box with this pinned combo. If you already
+# manage Chrome yourself, you can upgrade to plotly>=6.1 + kaleido>=1.0.
+plotly==5.24.1
+kaleido==0.2.1
+
+# ---- AI Chatbot ---------------------------------------------------------
+# Install whichever provider(s) you plan to use for the chatbot tab.
+anthropic>=0.34.0
+openai>=1.30.0
+
+# Live web search for the chatbot (no API key required). Package was
+# renamed from `duckduckgo-search` to `ddgs` — this installs the current one.
+ddgs>=8.0
+
+requests>=2.31

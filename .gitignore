@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Real secrets — never commit
+.streamlit/secrets.toml
+
+# Trained model artifacts are generated at runtime (first launch auto-trains
+# and saves one). Keep the folder, ignore the generated files.
+models/*.joblib
+!models/.gitkeep
